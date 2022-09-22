@@ -94,6 +94,7 @@ async function run(): Promise<void> {
     }
   } finally {
     const summaryText = core.summary.stringify()
+    core.info(summaryText)
     core.setOutput('summary', summaryText)
     await core.summary.write()
   }
